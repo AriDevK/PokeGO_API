@@ -1,0 +1,183 @@
+basePath: /
+host: localhost:8080
+info:
+  contact:
+    email: AriadneFave@hotmail.com
+    name: Ariadne Rangel aka AriDevK
+    url: AriDev.me
+  description: This is a sample server for Pokemon API.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Pokemon API
+  version: "1.0"
+paths:
+  /:
+    get:
+      description: Get all pokemon
+      parameters:
+      - default: 1
+        description: int valid
+        example: 1
+        in: query
+        maximum: 1000
+        minimum: 1
+        name: limit
+        type: integer
+      - default: 1
+        description: int valid
+        example: 1
+        in: query
+        maximum: 1000
+        minimum: 0
+        name: offset
+        type: integer
+      produces:
+      - application/json
+      responses: {}
+      summary: Get all pokemon
+      tags:
+      - pokemon
+  /generation/{number}:
+    get:
+      description: Get all pokemon by generation number
+      parameters:
+      - default: 1
+        description: int valid
+        example: 1
+        in: path
+        maximum: 8
+        minimum: 1
+        name: number
+        type: integer
+      - default: 1
+        description: int valid
+        example: 1
+        in: query
+        maximum: 1000
+        minimum: 1
+        name: limit
+        type: integer
+      - default: 1
+        description: int valid
+        example: 1
+        in: query
+        maximum: 1000
+        minimum: 0
+        name: offset
+        type: integer
+      produces:
+      - application/json
+      responses: {}
+      summary: Get all pokemon by generation number
+      tags:
+      - pokemon
+  /pokedex/{pokedexNumber}:
+    get:
+      description: Get all pokemon by pokedex number
+      parameters:
+      - default: 1
+        description: int valid
+        example: 1
+        in: path
+        maximum: 898
+        minimum: 1
+        name: pokedexNumber
+        type: integer
+      produces:
+      - application/json
+      responses: {}
+      summary: Get all pokemon by pokedex number
+      tags:
+      - pokemon
+  /region/{name}:
+    get:
+      description: Get all pokemon by region name
+      parameters:
+      - description: string enums
+        enum:
+        - Kanto
+        - Johto
+        - Hoenn
+        - Sinnoh
+        - Unova
+        - Kalos
+        - Alola
+        - Galar
+        in: path
+        name: name
+        type: string
+      - default: 1
+        description: int valid
+        example: 1
+        in: query
+        maximum: 1000
+        minimum: 1
+        name: limit
+        type: integer
+      - default: 1
+        description: int valid
+        example: 1
+        in: query
+        maximum: 1000
+        minimum: 0
+        name: offset
+        type: integer
+      produces:
+      - application/json
+      responses: {}
+      summary: Get all pokemon by region name
+      tags:
+      - pokemon
+  /type/{name}:
+    get:
+      description: Get all pokemon by type
+      parameters:
+      - description: string enums
+        enum:
+        - Fire
+        - Water
+        - Grass
+        - Electric
+        - Ice
+        - Fighting
+        - Poison
+        - Ground
+        - Flying
+        - Psychic
+        - Bug
+        - Rock
+        - Ghost
+        - Dark
+        - Dragon
+        - Steel
+        - Fairy
+        in: path
+        name: name
+        type: string
+      - default: 1
+        description: int valid
+        example: 1
+        in: query
+        maximum: 1000
+        minimum: 1
+        name: limit
+        type: integer
+      - default: 1
+        description: int valid
+        example: 0
+        in: query
+        maximum: 1000
+        minimum: 0
+        name: offset
+        type: integer
+      produces:
+      - application/json
+      responses: {}
+      summary: Get all pokemon by type
+      tags:
+      - pokemon
+schemes:
+- http
+swagger: "2.0"
