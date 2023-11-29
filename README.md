@@ -9,6 +9,8 @@ A Go API that returns pokemon information like name, type, stats, etc.
 ![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
 ![YAML](https://img.shields.io/badge/yaml-%23CB171E.svg?style=for-the-badge&logo=yaml&logoColor=white)
 
+[![wakatime](https://wakatime.com/badge/user/ecfcd101-7615-45f2-9a88-cb30e549611e/project/018bdb8d-1688-4fa0-aa1e-1ab31b978f90.svg)](https://wakatime.com/badge/user/ecfcd101-7615-45f2-9a88-cb30e549611e/project/018bdb8d-1688-4fa0-aa1e-1ab31b978f90)
+
 
 <br>
 
